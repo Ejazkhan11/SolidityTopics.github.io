@@ -1,0 +1,29 @@
+Abstrat Contracts =  Abstract contracts thats have at least one function without its implementation.
+                     To make a contract abstract you have to use abstract keyword.
+                     
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+abstract contract parent 
+{
+    string public str;
+    address public manager;
+
+    constructor () 
+    {
+        str ="Ali";
+        manager = msg.sender;
+    }
+function setter(string memory _str) public virtual; 
+}
+
+contract child is parent 
+{ 
+    function setter(string memory _str) public override 
+    {
+        str =_str;
+    }
+}
+

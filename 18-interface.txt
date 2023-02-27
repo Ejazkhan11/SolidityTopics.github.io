@@ -1,0 +1,20 @@
+interface = contract btw itself and any contract that implements it.
+            they can only inherits from other interfaces but not from other contracts.
+            cannot declare state variable.
+            cannot declare constructor.
+            function can be declare but not implemented All declared functions must be external.
+
+
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+interface parent {
+
+function setter(string memory _str) external;
+}
+
+abstract contract child is parent { 
+    
+}

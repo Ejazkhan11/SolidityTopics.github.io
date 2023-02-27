@@ -1,0 +1,17 @@
+events gets stored in logs files in nodes
+low cost storage
+
+
+contract demo
+{
+string public str;
+
+event register(address mamanger, string char);
+
+function setter(string memory _str) public
+{
+str = _str;
+emit register(msg.sender, str);
+}
+
+}

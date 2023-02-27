@@ -1,0 +1,68 @@
+(struct) structure data type aisa complex data type hay jo k fundamental data type ki madad say banta hay.
+structure contract k bahar b bana saqte ho our andar b bana saqte ho.
+struct agar ham function k andar use karte hay pir memory keyword use karna hota hay.
+
+
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+struct student{
+    uint roll;
+    string name;
+}
+
+contract Demo
+{
+    student public s1;
+
+    constructor(uint _roll,string memory _name)
+    {
+        s1.roll=_roll;
+        s1.name=_name;
+    }
+}
+
+
+
+
+agar new value deni ho ===>
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+struct student{
+    uint roll;
+    string name;
+}
+
+contract Demo
+{
+    student public s1;
+
+    constructor(uint _roll,string memory _name)
+    {
+        s1.roll =_roll;
+        s1.name=_name;
+    }
+
+    function change(uint _roll, string memory _name) public
+    {
+        student memory new_student=student({
+            roll:_roll,
+            name:_name
+        });
+
+        s1=new_student;
+    }
+}
+
+
+
+
+
+
+
+

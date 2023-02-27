@@ -1,0 +1,87 @@
+Local variable wo hote hay jo k function k body k andar decalare hote hay. ya stack may store hote hay na k contract
+storage may.
+
+string by default (contract storage) may store hote hay ya function k andar jab use karna hota hay pir ek keyword
+use karna hota hay ( memory ).
+
+Dont cost gas
+memory keyword cant be used at contract level
+
+
+
+
+
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local
+{
+    function store() pure public returns(uint)
+    {
+        uint age=14;
+        return age;
+    }
+}
+
+
+
+Getter function ===>
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local
+{
+  uint public age=9;
+
+  function getter() view public returns(uint)
+{
+  return age;
+ }
+}
+
+
+
+Setter function ====> 
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local
+{ 
+  uint public age=8;
+
+  function setter() public
+{
+  age=age+2;
+ }
+}
+
+
+
+set value==>
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local
+{ 
+  uint public age=8;
+
+  function setter(uint newage) public
+{
+  age=newage;
+ }
+}
+
+
+
+
+getter function does not pay gas fee
+setter function want gas fee( eslia q k ya blockchain may changes lata hay )
+

@@ -1,0 +1,36 @@
+view ya pure ham waha pe use karte hay jaha pe ham state varaible modify nahi karte
+view may ham state variable ko read karsaqte hay. lakin pure may nahi karsaqte na read na write.
+
+pure===>
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local
+{
+    function getter() public pure returns(uint)
+    {
+        uint age=14;
+        return age;
+    }
+}
+
+
+view===>
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract local
+{
+    uint public age=10;
+
+    function getter() public view returns(uint)
+    {
+        return age;
+    }
+}
+
+

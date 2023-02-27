@@ -1,0 +1,30 @@
+Aeorosolz
+inheritance =  inheritance in solidity is the procedure in which one contract inherits the attributes and method
+               from another contract.
+
+
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract parent 
+{
+    string public str;
+    address public manager;
+
+    constructor () 
+{
+        str ="Ali";
+        manager = msg.sender;
+    }
+
+function setter(string memory _str) public 
+{
+    str =_str;
+}
+}
+
+contract child is parent {
+
+}  

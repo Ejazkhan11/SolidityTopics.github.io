@@ -1,0 +1,97 @@
+ Remix IDE ===> Languages support [ solidity, Vyper ]. Written in [ JavaScript ].
+                Modules [ Testing, Debugging, Deploy ].
+
+
+
+Questions in solidity = 
+1- Explain the memory locations in solidity. there are four locations = storage, memory, stack, calldata,
+2- what is private variable = this is a varaible they doesn't have a public getter function.
+
+
+
+contract bytecode is public in readable form.
+contract does not to be public.
+bytecode is immutable.
+ABI act as a bridge btw applications and smart contract.
+ABI and bytecode cannot be generated without source code.
+
+
+
+Bytecode say Opcode generate hota hay==> Bytecode to Opcode convert site name( etherscan.io/opcode-tool )
+
+JavaScript VM = Transaction will be executed in a sandbox. own memory blockchain. ideal for testing.
+Injected Web3 = Deploy a contract or run a transaction on ethereum main or test network.
+Web3 Provider = Connect to a remote node and ethereum client.
+
+
+State variable ==> 
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract Runs 
+{
+    uint win;
+}
+
+koi b variable jo contract level pe deploy hota hay wo state variable hota hay.yani upar jo lika hay.
+ya blockchain may permanently store hota hay.eske lia Gas pay karni pati hay.
+
+state variable may 3 tariko say value enitialize yani desakte ho
+1==> [ Initialize the variable at declaration ]
+ // SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract Runs 
+{
+    uint public age=12;
+}  
+
+
+
+
+2===> [ Using the contracts constructor ]
+  // SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract Runs 
+{
+    uint public age;
+
+constructor()
+{
+   age=12;
+}
+
+} 
+
+
+
+
+3====>  [ Using the setter function ]
+ // SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract Runs 
+{
+    uint public age;
+
+function setAge() public
+{
+  age=12;
+}
+
+} 
+
+
+
+
+agar ap dusra state variable decalare karna chahte ho tho contract ko pir say compile and deploy karna hoga.
+these are permanently stored in contract storage.
+Cost gas(expensive).
+storage not dynamically allocated(yani jab new variable declare karna hota hay pir esko pir say compile-deploy karna hoga.
+
+

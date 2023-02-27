@@ -1,0 +1,90 @@
+Two type of arrays in solidity 1- Fixed size array.  2- Dynamic size array.
+
+1- Fixed size array ===>
+ya wo array hoti hay jismay compile time per length of array pata hoti hay.
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract array
+{
+uint[4] public arr= [10, 20, 30, 40];
+}
+
+
+2- Dynamic size array ===>
+esmay size batane ki zarurat nahi hay
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract array
+{
+  uint[] public arr;
+}
+
+
+
+
+Byte array ===>
+
+1 byte = 8 bits
+1 hexadecimal digit = 4 bits
+everything that will be stored in the byte array will be in the form of hexadecimal digits.
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract array
+{
+  bytes3 public b3;
+  bytes2 public b2;
+}
+
+
+set value =
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract array
+{
+  bytes3 public b3;
+  bytes2 public b2;
+
+ function setter() public
+ {
+    b3='abc';
+    b2='ab';
+}
+}
+
+
+
+bytes array cannot be modified.
+
+byte array [ fixed size array ] = byte1 bytes2 to bytes32.
+byte array [ dynamic size array ] = bytes which is shorthand for bytes[].
+
+
+byte dynamic size array ===>
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract array
+{
+  bytes public b1="abc";
+
+  function pushElement() public
+{
+  b1.push('d');
+}
+}
+
+ 

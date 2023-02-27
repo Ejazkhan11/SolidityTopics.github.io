@@ -1,0 +1,2 @@
+Polymorphism =  ek hi contract may 3 functions agar ek naam k ho our oske andar k veraibles different ho ya pir diploy
+                hoga esay polimorphism kehte hay.

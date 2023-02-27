@@ -1,0 +1,13 @@
+constructor ek special type ka function hota hay jo k sirf ek baar execute hota hay jab ham contract create karte hay.
+execute only once.
+you can create only one constructor and that is optional.
+
+
+Integers ===>
+
+integers (int)> esmay negative positive dono value consider karte hay.
+unsign integers (uint)> esmay sirf positive value hoti hay.
+
+Ranges of that => int8: -128 to 127  and  uint8: 0 to 255 --- int16: -32768 to 32767 and uint16: 0 to 65535
+int formula = -2^(n-1) to 2^(n-1)-1
+uint formula = 0 to 2^(n)-1 

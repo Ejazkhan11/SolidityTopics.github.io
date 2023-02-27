@@ -1,0 +1,18 @@
+require ka matlb ya hay k ya chiz lazmi honi chahia tab ap ya chiz karo
+
+
+contarct demo
+{
+address public owner;
+
+constructor ()
+{
+owner = msg.sender;
+}
+
+function get() public view returns(uint)
+{
+require(owner==msg.sender, "you r not the owner");
+return 10;
+}
+}
